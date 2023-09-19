@@ -1,3 +1,3 @@
 def call () {
-  sh 'echo this is a new branch from main' 
+  sh 'echo this is a new branch from master' 
 }
