@@ -1,15 +1,14 @@
-@Library('library-test@main') _
+@Library('library-test') _
 
 pipeline {
-    agent any
-    stages{
-        stage('checkout'){
-            steps{
-                helloWorld()
-            }
-        }
-    }
-    stage("Tools initialization") {
+       agent any
+       stages {
+          stage('checkout'){
+             steps{
+                 helloWorld()
+             }
+          }
+           stage("Tools initialization") {
                steps {
                    sh "mvn --version"
                    sh "java -version"
@@ -31,3 +30,4 @@ pipeline {
                }
            }
        }
+ }
