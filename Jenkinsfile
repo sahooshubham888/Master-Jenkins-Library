@@ -7,6 +7,11 @@ pipeline {
              steps{
                  helloWorld()
              }
+             stage ('build using maven'){
+                steps{
+                    mavenBuild()
+                }
+             }
           }
            stage("Tools initialization") {
                steps {
