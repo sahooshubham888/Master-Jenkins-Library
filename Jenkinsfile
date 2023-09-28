@@ -3,14 +3,9 @@
 pipeline {
        agent any
        stages {
-          stage ('checkout'){
-             steps {
+          stage('checkout'){
+             steps{
                  helloWorld()
-             }
-             stage ('build using maven'){
-                steps {
-                    mavenBuild()
-                }
              }
           }
            stage("Tools initialization") {
