@@ -4,11 +4,11 @@ pipeline {
        agent any
        stages {
           stage ('checkout'){
-             steps{
+             steps {
                  helloWorld()
              }
              stage ('build using maven'){
-                steps{
+                steps {
                     mavenBuild()
                 }
              }
